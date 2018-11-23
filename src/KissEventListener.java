@@ -1,3 +1,4 @@
-public interface KissEventListener {
-    void onKissEvent();
+public abstract class KissEventListener {
+    String clientId;
+    abstract void onKissEvent();
 }

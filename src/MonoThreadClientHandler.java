@@ -3,12 +3,16 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 
-public class MonoThreadClientHandler implements Runnable, KissEventListener {
+public class MonoThreadClientHandler extends KissEventListener implements Runnable {
 
     private static Socket clientDialog;
+    private String clientId;
+    private FaceValuesListener faceValuesListener;
 
-    public MonoThreadClientHandler(Socket client) {
+    public MonoThreadClientHandler(Socket client, FaceValuesListener faceValuesListener, String clientId) {
         MonoThreadClientHandler.clientDialog = client;
+        this.faceValuesListener = faceValuesListener;
+        this.clientId = clientId;
     }
 
     @Override
@@ -21,6 +25,7 @@ public class MonoThreadClientHandler implements Runnable, KissEventListener {
             while (!clientDialog.isClosed()) {
                 String entry = in.readUTF();
                 out.writeUTF("Server reply - " + entry + " - OK");
+                faceValuesListener.onNewValues(2.0f, 3.0f, clientId);
 
                 out.flush();
             }

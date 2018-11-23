@@ -13,10 +13,14 @@ public class MultiThreadServer {
 
     static ExecutorService executeIt = Executors.newFixedThreadPool(2);
 
+    static FaceValuesProcessorThread faceValuesProcessorThread = new FaceValuesProcessorThread();
+
     public static void main(String[] args) {
         try (ServerSocket server = new ServerSocket(3345);
              BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             System.out.println("Server socket created, command console reader for listen to server commands");
+
+            faceValuesProcessorThread.start();
 
             while (!server.isClosed()) {
                 if (br.ready()) {
@@ -31,7 +35,7 @@ public class MultiThreadServer {
                 }
 
                 Socket client = server.accept();
-                executeIt.execute(new MonoThreadClientHandler(client));
+                executeIt.execute(new MonoThreadClientHandler(client, faceValuesProcessorThread, "qwe"));
                 System.out.print("Connection accepted.");
             }
             executeIt.shutdown();
