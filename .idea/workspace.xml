@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b1313fd-06e4-4f7c-96a3-7c48d6a7b6c0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/MonoThreadClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/MonoThreadClientHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/MultiThreadServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/MultiThreadServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/TestRunnableClientTester.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FaceValuesListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FaceValuesListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FaceValuesProcessorThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FaceValuesProcessorThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KissEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KissEventListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MonoThreadClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MonoThreadClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MultiThreadServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultiThreadServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,12 +45,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3344" />
+          <entry key="java" value="3351" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3342" />
+          <entry key="JAVA" value="3349" />
           <entry key="RegExp" value="2" />
         </counts>
       </usages-collector>
@@ -81,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MonoThreadClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+            <state relative-caret-position="63">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,8 +85,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FaceValuesProcessorThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="67" />
+            <state relative-caret-position="165">
+              <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1947#1948#0" expanded="true" />
@@ -116,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/KissEventListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            <state relative-caret-position="34">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -267,12 +259,12 @@
       <workItem from="1543008843390" duration="74000" />
       <workItem from="1543050675652" duration="13690000" />
       <workItem from="1543085427898" duration="4690000" />
-      <workItem from="1543131785459" duration="10005000" />
+      <workItem from="1543131785459" duration="12561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36791000" />
+    <option name="totallyTimeSpent" value="39347000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -355,6 +347,24 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FaceValuesProcessorThread.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FaceValuesProcessorThread.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/untitled.iml">
@@ -406,23 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/KissEventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonoThreadClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FaceValuesListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -430,10 +423,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/KissEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonoThreadClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FaceValuesProcessorThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="67" />
+        <state relative-caret-position="165">
+          <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1947#1948#0" expanded="true" />

@@ -39,7 +39,7 @@ public class FaceValuesProcessorThread extends Thread implements FaceValuesListe
                 }
                 if (shouldSend) {
                     for (KissEventListener kissEventListener : kissEventListeners) {
-                       //if (!kissEventListener.clientId.equals(entry.getKey()))
+                       if (!kissEventListener.clientId.equals(entry.getKey()))
                             kissEventListener.onSmileEvent();
                     }
                 }
@@ -55,7 +55,7 @@ public class FaceValuesProcessorThread extends Thread implements FaceValuesListe
     @Override
     public void onKissValue(String clientId) {
             for (KissEventListener kissEventListener : kissEventListeners) {
-                //if (!kissEventListener.clientId.equals(clientId))
+                if (!kissEventListener.clientId.equals(clientId))
                     kissEventListener.onKissEvent();
             }
     }

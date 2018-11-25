@@ -50,7 +50,7 @@ public class MonoThreadClientHandler extends KissEventListener implements Runnab
     }
 
     @Override
-    public void onSmileEvent() {
+    public synchronized void onSmileEvent() {
         try {
             outputStream.writeUTF("SMILE");
         } catch (IOException e) {
@@ -59,7 +59,7 @@ public class MonoThreadClientHandler extends KissEventListener implements Runnab
     }
 
     @Override
-    public void onKissEvent() {
+    public synchronized void onKissEvent() {
         try {
             outputStream.writeUTF("KISS");
         } catch (IOException e) {
