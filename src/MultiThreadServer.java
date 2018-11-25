@@ -21,6 +21,7 @@ public class MultiThreadServer {
             System.out.println("Server socket created, command console reader for listen to server commands");
 
             faceValuesProcessorThread.start();
+            int i = 0;
 
             while (!server.isClosed()) {
                 if (br.ready()) {
@@ -35,7 +36,10 @@ public class MultiThreadServer {
                 }
 
                 Socket client = server.accept();
-                executeIt.execute(new MonoThreadClientHandler(client, faceValuesProcessorThread, "qwe"));
+                MonoThreadClientHandler clientHandler = new MonoThreadClientHandler(client, faceValuesProcessorThread, "Client socket " + i++);
+                faceValuesProcessorThread.addKissEventListener(clientHandler);
+                executeIt.execute(clientHandler);
+
                 System.out.print("Connection accepted.");
             }
             executeIt.shutdown();

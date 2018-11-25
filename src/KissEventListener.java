@@ -1,4 +1,6 @@
 public abstract class KissEventListener {
     String clientId;
-    abstract void onKissEvent();
+    abstract void onSmileEvent();
+
+    public abstract void onKissEvent();
 }

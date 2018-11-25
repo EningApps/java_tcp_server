@@ -6,34 +6,41 @@ import java.net.Socket;
 public class MonoThreadClientHandler extends KissEventListener implements Runnable {
 
     private static Socket clientDialog;
-    private String clientId;
     private FaceValuesListener faceValuesListener;
+
+    private DataOutputStream outputStream;
+    private DataInputStream inputStream;
 
     public MonoThreadClientHandler(Socket client, FaceValuesListener faceValuesListener, String clientId) {
         MonoThreadClientHandler.clientDialog = client;
         this.faceValuesListener = faceValuesListener;
-        this.clientId = clientId;
+        super.clientId = clientId;
     }
 
     @Override
     public void run() {
 
         try {
-            DataOutputStream out = new DataOutputStream(clientDialog.getOutputStream());
-            DataInputStream in = new DataInputStream(clientDialog.getInputStream());
+            outputStream = new DataOutputStream(clientDialog.getOutputStream());
+            inputStream = new DataInputStream(clientDialog.getInputStream());
 
             while (!clientDialog.isClosed()) {
-                String entry = in.readUTF();
-                out.writeUTF("Server reply - " + entry + " - OK");
-                faceValuesListener.onNewValues(2.0f, 3.0f, clientId);
+                //12f
+                String entry = inputStream.readUTF();
+                float value = Float.valueOf(entry);
+                if (value == 1000f) {
+                    faceValuesListener.onKissValue(clientId);
+                } else {
+                    faceValuesListener.onNewValues(value, clientId);
+                }
 
-                out.flush();
+                outputStream.flush();
             }
 
             System.out.println("Client disconnected");
             System.out.println("Closing connections & channels.");
-            in.close();
-            out.close();
+            inputStream.close();
+            outputStream.close();
             clientDialog.close();
             System.out.println("Closing connections & channels - DONE.");
 
@@ -43,7 +50,20 @@ public class MonoThreadClientHandler extends KissEventListener implements Runnab
     }
 
     @Override
-    public void onKissEvent() {
+    public void onSmileEvent() {
+        try {
+            outputStream.writeUTF("SMILE");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    @Override
+    public void onKissEvent() {
+        try {
+            outputStream.writeUTF("KISS");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
